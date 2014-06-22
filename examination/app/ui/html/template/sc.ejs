@@ -1,0 +1,40 @@
+﻿<h3>选择题</h3>
+<br/>
+
+<div class="qcontainer">
+
+<% for(var i=0; i<单选题.length; i++) {%>
+  
+	<%= i+1 %>:
+    <span style="font-weight:600">
+		<%= 单选题[i].题目 %>
+	</span>
+	( )
+
+	<br/>
+	<table style="margin-top:10px;margin-left:17px">
+		<tr>
+		<td style="min-width:120px">
+			<input type="radio" name="groupSC<%=i%>" onclick="javascript:getAnswerSC(<%=i%>,'A')">
+			A、<%= 单选题[i].选项.A %>
+		</td>
+		<td style="min-width:120px">
+			<input type="radio" name="groupSC<%=i%>" onclick="javascript:getAnswerSC(<%=i%>,'B')">
+			B、<%= 单选题[i].选项.B %>
+		</td>
+		</tr>
+		<tr>
+		<td style="min-width:120px">
+			<input type="radio" name="groupSC<%=i%>" onclick="javascript:getAnswerSC(<%=i%>,'C')">
+			C、<%= 单选题[i].选项.C %>
+		</td>
+		<td style="min-width:120px">
+			<input type="radio" name="groupSC<%=i%>" onclick="javascript:getAnswerSC(<%=i%>,'D')">
+			D、<%= 单选题[i].选项.D %>
+		</td>
+		</tr>
+	</table>
+	<br/>
+<% } %>
+
+</div>

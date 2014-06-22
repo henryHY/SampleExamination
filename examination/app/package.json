@@ -1,0 +1,28 @@
+{
+
+  "name": "client1",
+  "main": "ui/html/sys/program.html",
+  "node-main": "module/program.js",
+  "single-instance":true,
+  
+  "window": {
+    "icon": "appw.png",
+    "toolbar": false,
+    "width": 350,
+    "height": 100,
+    "position": "center",
+	"frame": true,
+	"always-on-top":false,
+	"show": true,
+	"min_width": 350,	
+    "min_height": 100
+
+  },
+
+  "webkit": {
+    "plugin": true
+  }
+  
+  ,"chromium-args": "--enable-threaded-compositing"
+
+}

@@ -1,0 +1,29 @@
+﻿<h3>判断题</h3>
+<br/>
+
+<div class="qcontainer">
+
+<% for(var i=0; i<判断题.length; i++) {%>
+  
+	<%= i+1 %>:
+    <span style="font-weight:600">
+		<%= 判断题[i].题目 %>
+	</span>
+	( )
+
+	<br/>
+	<table style="margin-top:10px;margin-left:17px">
+		<tr>
+		<td style="min-width:100px">
+		<input type="radio" name="groupTF<%=i%>" onclick="javascript:getAnswerTF(<%=i%>,'true')">
+		正确</td>
+		<td style="min-width:100px">
+		<input type="radio" name="groupTF<%=i%>" onclick="javascript:getAnswerTF(<%=i%>,'false')">
+		错误</td>
+		</tr>
+		
+	</table>
+	<br/>
+<% } %>
+
+<div>

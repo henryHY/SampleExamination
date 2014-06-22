@@ -1,0 +1,46 @@
+﻿@font-face
+{ 
+    font-family: "msyh1";
+    src: url("../font/msyh.ttf");
+}
+
+* {
+
+    font-family:"msyh1" !important;
+
+}
+
+.yh 
+{
+    font-family:"msyh1" !important;
+}
+
+body {
+
+    margin-bottom:0;
+    padding-bottom:0;
+    
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: #CCCCCC;
+    -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 5px;
+    background-color: #999999;
+    -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 5px;
+    background-color: #CCCCCC;
+    -webkit-border-radius: 6px;
+}

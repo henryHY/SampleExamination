@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>考试系统</title>
+
+    <link href="../../css/comm.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../js/jq.js"></script>
+    <script type="text/javascript" src="../../js/comm.js"></script>
+    <script type="text/javascript" src="../../js/preload.js"></script>
+
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body onload="process.mainModule.exports.callback0(loaded)">
+
+    <div id="ld1" style="height: 80px; line-height: 80px; text-align: center; font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif !important">
+
+        系统载入中...
+
+        <span style="color: green;" class="yh">OK</span>
+
+    </div>
+
+</body>
+<script type="text/javascript">
+
+    loaded=function ()
+    {
+        preload( function (err)
+        {
+            if ( err )
+            {
+                console.log( err )
+                alert(err)
+            }
+            else
+            {
+                openNw()
+            }
+            
+        } )
+    }
+
+    function openNw()
+    {
+        setTimeout( function ()
+        {
+
+            var nwin=global.openWin( 'mainFrame.html',{
+
+                position: 'center',
+                width: 800,
+                height: 610,
+                "icon": "appw.png",
+                "toolbar": false,
+                "min_width": 1024,
+                "min_height": 700
+
+            } );
+
+            nwin.on( "loaded",function ()
+            {
+
+                global.closeWindow( global._win );
+                nwin.focus();
+
+            } );
+
+        },100 );
+    }
+
+</script>
+</html>
